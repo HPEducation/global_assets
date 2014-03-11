@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+nav.subnavi ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav.subnavi ul li {
+	display: inline-block;
+	width: 30px;
+	height:30px;
+	text-align: center;
+	line-height: 32px;
+	background: #ccc;
+	color:#eee;
+	border:2px solid white;
+	-moz-box-shadow:    0px 3px 3px 0 rgba(0, 0, 0, 0.7), inset 0px -3px 10px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.7), inset 0px -3px 10px rgba(0, 0, 0, 0.7);
+	box-shadow:         0px 3px 3px 0 rgba(0, 0, 0, 0.7), inset 0px -3px 10px rgba(0, 0, 0, 0.7);
+
+	/* turn into circle */
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px; /* future proofing */
+	-khtml-border-radius: 20px; /* for old Konqueror browsers */
+}
+
+nav.subnavi ul li.active {
+	background: #7957a1;
+	-moz-box-shadow:    inset 0px -3px 10px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: inset 0px -3px 10px rgba(0, 0, 0, 0.7);
+	box-shadow:         inset 0px -3px 10px rgba(0, 0, 0, 0.7);
+	cursor: default;
+}

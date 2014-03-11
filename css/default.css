@@ -1,0 +1,314 @@
+/* last edited by Jin on 2014.01.22 */
+
+@charset "utf-8";
+
+@font-face {  
+	font-family: "Arial";  
+	/*src: url('../fonts/GothamRnd-Bold.eot');*/ /* for IE */
+	/*src: local('Gotham Round Bold'), url('../fonts/GothamRnd-Bold.woff') format('woff'), url('../fonts/GothamRnd-Bold.ttf') format('truetype'), url('../fonts/GothamRnd-Bold.svg') format('svg');*/
+	src: local('Arial'), url('../fonts/arial.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal; 
+}
+
+html, body {
+	margin:0;
+	padding:0;
+	/*background:white;	*/
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	font-size: 62.5%;  /* Gives a base of 10px */
+	width:1168px;
+	/*height:650px; do we need to set this? probably not if page gonna scroll */
+	background:url('../images/mainBG.jpg') no-repeat left top;
+}
+
+*:focus {
+    outline: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+} 
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+a { color:inherit; text-decoration:none; outline:none; /* FF1.5+ IE7+*/ -moz-outline: none /* FF<=1.5*/}
+a:hover { text-decoration:underline; }
+a img { outline:none; border:0; }
+
+img {
+	display: block;
+}
+
+.center {
+	margin-left:auto;
+	margin-right:auto;	
+}
+
+.pointer { cursor:pointer; }
+
+.vmiddle {
+	display:table-cell;
+	vertical-align:middle;	
+}
+
+h1 {
+	font-size: 3.2em !important;
+	font-weight: 700 !important;
+	color:white;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+h2 {
+	font-size: 120% !important;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+h3{
+	font-size: 100% !important;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+section, article, aside, footer, header, nav, hgroup {
+  display:block;
+}
+
+.wrapper {
+	margin: 0 auto;
+	padding: 20px; /* set main padding */
+	width: auto;
+	position: relative;
+	/*min-height:960px;*/
+}
+
+.header, header {
+	margin-top:-20px;
+	display: table;
+	position:relative;
+	overflow: hidden;
+	height: 70px;
+}
+
+.wrapper > .header > * {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.restricted{
+	text-align:center;
+	font: 18px Arial;
+	color: white;
+}
+
+.warfighting {
+	font: 18px Arial;
+	color:white;
+	display:inline-block;
+}
+
+.content {
+	/* max height = 650px - header 70px - bottom padding 20px - padding top 20px = 540px */
+	padding-top: 20px;
+	position:relative;
+	font-size: 2.4em;
+}
+
+.justify { 
+	text-align: justify; /*1. set container as justify*/
+}
+
+.justify * {
+	display: inline-block;/*2. set child elements to inline block, input button is alerady inline-block by default */
+}
+
+.justify:after {/*3. create 2nd line */
+	content: '';
+	width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+	display: inline-block;
+}
+
+.childFloatL * {
+	float: left;
+	display: inline-block;
+	border:1px solid red;
+	margin-right: 15px; /* optional */
+}
+
+.actionsHL {
+	color:#f00;
+}
+
+.tick, .tickheavy {
+	color: green;
+	font-size: 24px;
+}
+
+.tick:after {
+	content: "\2713";
+}
+
+.tickheavy:after {
+	content: "\2714";
+}
+
+.cross, .crossheavy {
+	color: red;
+	font-size: 24px;
+}
+
+.cross:after {
+	content: "\2717";
+}
+
+.crossheavy:after {
+	content: "\2718";
+}
+
+.innershadow {
+	-moz-box-shadow:    inset 2px 2px 10px rgba(0, 0, 0, .7);
+	-webkit-box-shadow: inset 2px 2px 10px rgba(0, 0, 0, .7);
+	box-shadow:         inset 2px 2px 10px rgba(0, 0, 0, .7);
+}
+
+.outershadow {
+	-moz-box-shadow:    3px 3px 7px 0 rgba(0, 0, 0, .7);
+	-webkit-box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, .7);
+	box-shadow:         3px 3px 7px 0 rgba(0, 0, 0, .7);
+}
+
+.roundedcorner {
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px; /* future proofing */
+	-khtml-border-radius: 7px; /* for old Konqueror browsers */
+}
+
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+h2:first-child { margin-top: 0; }
+
+section { margin-top: 40px; }
+section:first-child { margin-top: 0; }
+
+p { margin-top: 5px; }
+
+.closebtn {
+	background: url('../images/closebtn.png') left top no-repeat;
+	position: absolute;
+	top: -13px;
+	right: -13px;
+	height: 29px;
+	width: 29px;
+}
+
+ul, ol {
+	margin-top: 0;
+}
+
+.customCheckbox input[type=checkbox], .customRadio input[type=radio] {
+	display: none;
+}
+
+.customCheckbox label {
+	display: inline-block;  
+	cursor: pointer;
+	position: relative;  
+	padding-left: 25px;
+}
+.customCheckbox label:before {
+	content: "";  
+	display: inline-block;  
+  
+	width: 16px;  
+	height: 16px;  
+  
+	margin-right: 10px;  
+	position: absolute;  
+	left: 0;  
+	top: 5px;  
+	background-color: #aaa;  
+	box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+
+	border-radius: 3px;  
+}
+.customCheckbox input[type=checkbox]:checked + label:before {  
+	content: "\2713";
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+	font-size: 15px;
+	color: #f3f3f3;
+	text-align: center;
+	line-height: 15px;
+}
+.customCheckbox input[type=checkbox].incorrect + label, .customCheckbox input[type=checkbox].incorrect + label:before {
+	content: "\2717";
+	color: red !important;
+}
+.customCheckbox input[type=checkbox].correct + label, .customCheckbox input[type=checkbox].correct + label:before {
+	color: green !important;
+}
+
+.customRadio label {
+	display: inline-block;  
+	cursor: pointer;  
+	position: relative;  
+	padding-left: 25px;
+}
+.customRadio label:before {
+	content: "";
+	display: inline-block;
+
+	width: 16px;
+	height: 16px;
+
+	margin-right: 10px;
+	position: absolute;
+	left: 0;
+	top: 5px;
+	background-color: #aaa;
+	box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+
+	border-radius: 8px;
+}
+.customRadio input[type=radio]:checked + label:before {
+	content: "\2022";
+	color: #f3f3f3;
+	font-size: 30px;
+	text-align: center;
+	line-height: 18px;
+}
+.customRadio input[type=radio].incorrect + label, .customRadio input[type=radio].incorrect + label:before {
+	content: "";
+	color: red !important;
+}
+.customRadio input[type=radio].correct + label, .customRadio input[type=radio].correct + label:before {
+	color: green !important;
+}
+
+.instructions {
+	font-style: italic;
+}
+
+.note {
+	font-style: italic;
+	font-size: smaller;
+}

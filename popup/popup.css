@@ -1,0 +1,162 @@
+/* click point rotating animation */
+@keyframes popup_point_rotate {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+@-webkit-keyframes popup_point_rotate {
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes popup_point_rotate {
+	from { -moz-transform: rotate(0deg); }
+	to { -moz-transform: rotate(360deg); }
+}
+@-o-keyframes popup_point_rotate {
+	from { -o-transform: rotate(0deg); }
+	to { -o-transform: rotate(360deg); }
+}
+
+/* popup show animation */
+@keyframes popup_show {
+	from { opacity: 0; }
+	to { opacity: 1.0; }
+}
+@-webkit-keyframes popup_show {
+	from { opacity: 0; }
+	to { opacity: 1.0; }
+}
+@-moz-keyframes popup_show {
+	from { opacity: 0; }
+	to { opacity: 1.0; }
+}
+@-o-keyframes popup_show {
+	from { opacity: 0; }
+	to { opacity: 1.0; }
+}
+
+/* zoom image in */
+@keyframes popup_zoomin {
+	from { transform: scale(1,1) translate(0px,0px); }
+	to { transform: scale(2,2) translate(0px,-20px); }
+}
+@-webkit-keyframes popup_zoomin {
+	from { -webkit-transform: scale(1,1) translate(0px,0px); }
+	to { -webkit-transform: scale(2,2) translate(0px,-20px); }
+}
+@-moz-keyframes popup_zoomin {
+	from { -moz-transform: scale(1,1) translate(0px,0px); }
+	to { -moz-transform: scale(2,2) translate(0px,-20px); }
+}
+@-o-keyframes popup_zoomin {
+	from { -o-transform: scale(1,1) translate(0px,0px); }
+	to { -o-transform: scale(2,2) translate(0px,-20px); }
+}
+
+img.popup_rotate {
+	cursor: pointer;
+	width: 30px; height: 30px; border: none;
+	position: absolute; left:0px; top:0px;
+	display: block;
+	animation-name: popup_point_rotate;
+	animation-duration: 0.7s;
+	animation-iteration-count: infinite;
+	animation-timing-function:linear;
+	-webkit-animation-name: popup_point_rotate;
+	-webkit-animation-duration: 0.7s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function:linear;
+	-moz-animation-name: popup_point_rotate;
+	-moz-animation-duration: 0.7s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function:linear;
+	-o-animation-name: popup_point_rotate;
+	-o-animation-duration: 0.7s;
+	-o-animation-iteration-count: infinite;
+	-o-animation-timing-function:linear;
+}
+img.popup_point, img.popup_rotate_stopped {
+	cursor: pointer;
+	width: 30px; height: 30px; border: none;
+	position: absolute; left:0px; top:0px;
+}
+img.popup_rotate_stopped {
+	display: none;
+}
+font.popup_point {
+	cursor: pointer;
+	position: absolute; left:0px; top:7px;
+	width: 30px; text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    text-shadow:
+        0px -1px 0px rgba(000,000,000,0.7),
+        0px 1px 0px rgba(255,255,255,0.3);
+}
+font.popup_point_hidden {
+	cursor: pointer;
+	position: absolute; left:0px; top:7px;
+	width: 30px; text-align: center;
+	font-size: 10px;
+	visibility: hidden;
+}
+div.popup_point {
+	cursor: pointer;
+	z-index: 1000;
+	width: 30px; height: 30px;
+	position: absolute;
+}
+div.popup, div.popup_shown {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt; line-height:1.25;
+	width: 380px; height: auto;
+	border-style: solid;
+	border-width: 21px 17px 20px 17px;		/* top, right, bottom, left */
+	-moz-border-image: url(popup.png) 21 17 20 17 repeat;
+	-webkit-border-image: url(popup.png) 21 17 20 17 repeat;
+	-o-border-image: url(popup.png) 21 17 20 17 repeat;
+	border-image: url(popup.png) 21 17 20 17 fill repeat;
+	z-index: 1001;
+	position: absolute;
+}
+div.popup {
+	opacity: 0;
+	top: 0px; left: -380px;
+	z-index: 999;
+}
+div.popup_shown {
+	animation-name: popup_show;
+	animation-duration: 0.5s;
+	animation-timing-function:linear;
+	-webkit-animation-name: popup_show;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function:linear;
+	-moz-animation-name: popup_show;
+	-moz-animation-duration: 0.5s;
+	-moz-animation-timing-function:linear;
+	-o-animation-name: popup_show;
+	-o-animation-duration: 0.5s;
+	-o-animation-timing-function:linear;
+}
+img.popup_enlarged {
+	cursor: pointer;
+	position: absolute; left:0px; top:0px;
+	display: block;
+	animation-name: popup_zoomin;
+	animation-duration: 0.4s;
+	animation-timing-function:linear;
+	animation-fill-mode: forwards;
+	-webkit-animation-name: popup_zoomin;
+	-webkit-animation-duration: 0.4s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-name: popup_zoomin;
+	-moz-animation-duration: 0.4s;
+	-moz-animation-timing-function:linear;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-name: popup_zoomin;
+	-o-animation-duration: 0.4s;
+	-o-animation-timing-function:linear;
+	-o-animation-fill-mode: forwards;
+	z-index: 1010;
+}
